@@ -39,7 +39,7 @@ def main():
             urls = f.read().splitlines()
             for url in urls:
                 content = fetch_url_content(url)
-                find_js_strings(content)
+                find_js_strings(content, url)
     elif args.target:
         # Target file provided
         url = args.target
